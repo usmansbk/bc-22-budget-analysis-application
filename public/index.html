@@ -94,6 +94,20 @@ body {
   background: #2E86C1;
   font-family: "Roboto", sans-serif;
 }
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 5%;
+    width: 20px;
+    height: 20px;
+    visibility: 'hidden';
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
   </style>
   <script>
   function signin() {
@@ -102,7 +116,7 @@ body {
   firebase.auth()
   .signInWithEmailAndPassword(username, password).
   then(function(result) {
-    document.getElementById('toast').innerHTML = 'Logging in user...'
+    document.getElementById('ld').style.visibility = 'visible'
   }).catch(function(error) {
     console.log('sign in failed');
     document.getElementById('toast').innerHTML = 'Invalid username or password'
@@ -123,7 +137,8 @@ body {
     <p class="message">Not registered? <a href="html/signup.html">Create an account</a></p>
      </form>
   </div>
-     <p id='toast'><p>
+  <div id='ld' class='loader'></div>
+  <p id='toast'></p>
 
 
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
