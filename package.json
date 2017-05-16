@@ -1,0 +1,29 @@
+{
+  "name": "budgetsheep",
+  "version": "1.0.0",
+  "description": "budget analyzer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmansbk/bc-22-budget-analysis-application.git"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "heroku"
+  ],
+  "author": "Usman Babakolo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmansbk/bc-22-budget-analysis-application/issues"
+  },
+  "homepage": "https://github.com/usmansbk/bc-22-budget-analysis-application#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "firebase": "^3.9.0"
+  }
+}
