@@ -12,6 +12,11 @@ app.get('/html/signup.html', (req, res) => {
   res.sendfile('./public/signup.html')
 })
 
+// Get dashboard
+app.get('/html/dashboard.html', (req, res) => {
+  res.sendfile('./public/dashboard.html')
+})
+
 app.post('/', function(req, res) {
   console.log('Got a POST request for the login page');
   res.send('Login')
