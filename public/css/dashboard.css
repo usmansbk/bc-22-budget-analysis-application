@@ -80,7 +80,7 @@
   background: #CA0D1B;
 }
 
-.fab button:hover,.fab button:active,.fab button:focus, .item {
+.fab button:hover,.fab button:active,.fab button:focus {
   background: #184DE5;
 }
 
@@ -95,4 +95,5 @@
 .item {
   width: 90%;
   text-align: center;
+  background: #2E86C1;
 }
