@@ -24,9 +24,13 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "firebase": "^3.9.0",
+    "firebase": "^3.9.0"
   },
   "engines": {
-    "node":"6.10.3"
+    "node":"6.10.3",
+    "npm":"3.10.10"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
