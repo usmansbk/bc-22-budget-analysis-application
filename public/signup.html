@@ -11,13 +11,14 @@
   <p>easy budgetting.</p>
   <div class="form">
       <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input id='email-tf' type="text" placeholder="email address"/>
-      <input id='passwd-tf' type="password" placeholder="password"/>
+      <input id='username' type="text" placeholder="name"/>
+      <input id='email-tf' type="text" placeholder="email address example@eg.com"/>
+      <input id='passwd-tf' type="password" placeholder="password must be at least 6 character long"/>
       <input id='btn' type='button' value='create' onclick="createuser()"/>
       <p class="message">Already registered?<a href='./index.html'>Sign In</a></p>
       </form>
   </div>
+  <p id='toast'></p>
 
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 <script src='js/auth.js'></script>

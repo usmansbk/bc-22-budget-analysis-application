@@ -18,9 +18,10 @@
 }
 
 .main {
-  margin-top: 5%;
+  margin-top: 50px;
   padding: 16px;
 }
+
 
 #logout-button {
   padding-right: 10px;
@@ -29,13 +30,13 @@
 
 #greetings {
   margin: 15px;
-  padding-top: 15px;
+  padding-top: 39px;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   color: white;
 }
 
-.logout {
+.logout, .item, #cancelbtn button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -53,9 +54,6 @@
 }
 
 .fab button {
-  position: fixed;
-  bottom: 0;
-  right: 0;
   margin: 15px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -68,11 +66,33 @@
   cursor: pointer;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
 }
+
+#savebtn button {
+  background: #417327
+}
+
+.ffab, #newplan {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 .navbar #lg-btn:hover,.navbar #lg-btn:active,.navbar #lg-btn:focus {
   background: #CA0D1B;
 }
 
+.fab button:hover,.fab button:active,.fab button:focus, .item {
+  background: #184DE5;
+}
 
-.fab button:hover,.fab button:active,.fab button:focus {
-  background: #2E86C1;
+#cancelbtn button:hover,#cancelbtn button:active,#cancelbtn button:focus{
+  background: #E52518;
+}
+
+#savebtn button:hover,#savebtn button:active,#savebtn button:focus{
+  background: #099A14;
+}
+
+.item {
+  width: 90%;
+  text-align: center;
 }

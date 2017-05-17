@@ -23,6 +23,10 @@ app.get('/dashboard.html', (req, res) => {
   res.render('./public/dashboard.html')
 })
 
+app.get('/newplan.html', (req, res) => {
+  res.render('./public/newplan.html')
+})
+
 app.post('/', function(req, res) {
   console.log('Got a POST request for the login page');
   res.send('Login')
