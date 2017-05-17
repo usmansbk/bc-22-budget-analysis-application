@@ -1,7 +1,7 @@
-# Budget Analysis
+# BudgetSheep
 
 ## Introduction
-*  **`Budget Analysis`** is an Express Js Powered Budget Analyzing App.
+*  **`BudgetSheep`** is an Express Js Powered Budget Analyzing App.
 *  It has the following features;
   *  Login with Email and Password
   *  Allows users to;
@@ -14,10 +14,10 @@
 
 ### Back End Dependencies
 *  This app's functionality depends on some Node packages including;
-  *  **[Express Js](https://www.djangoproject.com/)** - This framework helps is essential in the creation of  object relational models and it also handles routing on the back end.
+  *  **[Express.Js](https://www.expressjs.com/)** - This framework helps is essential in the creation of  object relational models and it also handles routing on the back end.
 
 ## Front End Dependencies
-*  The app's layout have been styled using this CSS framework
+*  The app's layout have been styled using this CSS
 
 ## Installation and setup
 *  Navigate to a directory of choice on `terminal`.
