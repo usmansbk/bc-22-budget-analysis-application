@@ -6,10 +6,11 @@ function createuser() {
   console.log(password);
   firebase.auth()
   .createUserWithEmailAndPassword(email, password)
-  .then(function(result) {
+  .then(function() {
     console.log('Creation successful')
     window.location='/'
   })
   .catch(function(error) {
     console.log('Create user failed')
-})
+});
+}
