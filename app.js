@@ -2,19 +2,25 @@ var express = require('express');
 var app = express()
 var bodyParser = require('body-parser');
 
+let port = process.env.PORT || 4000;
+
+app.use(express.static('public'));
+
 // Gets login(index) page
 app.get('/', (req, res) => {
-  res.sendfile('./public/index.html')
+  console.log('rquest for home page')
+  res.render('./public/index.html')
 })
 
 // Get sign up page
-app.get('/html/signup.html', (req, res) => {
-  res.sendfile('./public/signup.html')
+app.get('/signup.html', (req, res) => {
+  console.log('request for sign up page')
+  res.render('./public/signup.html')
 })
 
 // Get dashboard
-app.get('/html/dashboard.html', (req, res) => {
-  res.sendfile('./public/dashboard.html')
+app.get('/dashboard.html', (req, res) => {
+  res.render('./public/dashboard.html')
 })
 
 app.post('/', function(req, res) {
@@ -22,6 +28,6 @@ app.post('/', function(req, res) {
   res.send('Login')
 })
 
-app.listen(8081, ()=> {
-  console.log('Listening at 8081');
+app.listen(port, ()=> {
+  console.log('Listening at ' + port);
 })

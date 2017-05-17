@@ -1,20 +1,22 @@
 <html>
     <head>
-      <title>User Board</title>
+      <title>BudgetSheep | dashboard</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="../css/user_board.css">
+      <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+      <script type="text/javascript" src='js/signout-auth.js'></script>
     </head>
 
     <body>
       <div class='navbar'>
-        <span id='greetings'>Welcome, <span id='username'>Usman Suleiman</span></span>
-        <input class='logout' type='button' value='Log out' style='float: right;'>
+        <span id='greetings'>Welcome, <span id='uid'>Usman Suleiman</span></span>
+        <input id='lg-btn' class='logout' type='button' value='Log out' onclick='signout()'style='float: right;'>
       </div>
       <div class='main'></div>
       <div class='fab'>
       <button>New Plan</button>
     </div>
       </div>
-
+      <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+      <script type="text/javascript" src='js/auth.js'></script>
     </body>
 </html>

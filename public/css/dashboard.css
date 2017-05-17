@@ -1,0 +1,78 @@
+.navbar {
+  overflow: hidden;
+  background-color: #2E86C1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main {
+  margin-top: 5%;
+  padding: 16px;
+}
+
+#logout-button {
+  padding-right: 10px;
+  padding-top: 6px;
+}
+
+#greetings {
+  margin: 15px;
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
+.logout {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #b94646;
+  width: 100px;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+}
+.logout input:hover,.logout input:active,.logout input:focus {
+  background: #2E86C1;
+}
+
+.fab button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1E78B4;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+}
+.navbar #lg-btn:hover,.navbar #lg-btn:active,.navbar #lg-btn:focus {
+  background: #CA0D1B;
+}
+
+
+.fab button:hover,.fab button:active,.fab button:focus {
+  background: #2E86C1;
+}
