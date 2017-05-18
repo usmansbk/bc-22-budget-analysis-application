@@ -1,35 +1,39 @@
 var express = require('express');
+var session = require('client-sessions');
 var app = express()
 var bodyParser = require('body-parser');
 
 let port = process.env.PORT || 4000;
 
-app.use(express.static('public'));
-
+//app.use(express.static('public'));
+app.set('view engine', 'jade');
+app.use(express.static(__dirname + '/public'))
+app.use(bodyParser.urlencoded({ extended: true }));
 // Gets login(index) page
 app.get('/', (req, res) => {
   console.log('rquest for home page')
-  res.render('./public/index.html')
+  res.render('index.jade')
 })
 
 // Get sign up page
-app.get('/signup.html', (req, res) => {
+app.get('/signup', (req, res) => {
   console.log('request for sign up page')
-  res.render('./public/signup.html')
+  res.render('signup.jade')
 })
 
 // Get dashboard
-app.get('/dashboard.html', (req, res) => {
-  res.render('./public/dashboard.html')
+app.get('/dashboard', (req, res) => {
+
+  res.render('dashboard.jade')
 })
 
-app.get('/newplan.html', (req, res) => {
-  res.render('./public/newplan.html')
+app.get('/plan', (req, res) => {
+  res.render('newplan.jade')
 })
 
-app.post('/', function(req, res) {
-  console.log('Got a POST request for the login page');
-  res.send('Login')
+app.get('/logout', (req, res)=> {
+  req.session.reset();
+  res.redirect('/')
 })
 
 app.listen(port, ()=> {

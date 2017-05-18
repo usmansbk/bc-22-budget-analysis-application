@@ -1,0 +1,57 @@
+html
+  head
+    title BudgetSheep | New Plan
+    meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1')
+    script(type='text/javascript', src='js/signout-auth.js')
+    script(type='text/javascript', src='js/navbtn.js')
+    script(type='text/javascript', src='controllers/manipulate_table.js')
+    link(rel='stylesheet', type='text/css', href='css/dashboard.css')
+    link(rel='stylesheet', type='text/css', href='css/modal.css')
+  body
+    .navbar
+      span#title New Plan
+      input#lg-btn.logout(type='button', value='Log out', onclick='signout()', style='float: right;')
+    // Trigger/Open The Modal
+    .main
+      table#table
+        tr
+          th Category
+          th Description
+          th Amount
+      // Trigger/Open The Modal
+      // The Modal
+      #myModal.modal
+        // Modal content
+        .modal-content
+          .modal-body
+            form.modal-form
+              select#category
+                option(value='Income') Income
+                option(value='Taxes') Taxes
+                option(value='Housing') Housing
+                option(value='Utilities') Utilities
+                option(value='Groceries') Groceries
+                option(value='Insurance') Insurance
+                option(value='Phone') Phone
+                option(value='Credit_cards') Credit Cards
+                option(value='School') School
+                option(value='Savings') Savings
+                option(value='Entertainment') Entertainment
+                option(value='Others') Others
+              input#desc(type='text', placeholder='Description')
+              input#amnt(type='number', placeholder='Amount')
+              .fab
+                button(type='button', onclick='addrow()') Add
+            .close
+    .ffab
+      .fab
+        button#addbtn(onclick='add()') Add
+      .fab
+        button#undobtn(onclick='deleterow()') Undo
+      #savebtn.fab
+        button(onclick='save()') Save
+      #cancelbtn.fab
+        button(onclick='cancel()') Cancel
+    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+    script(type='text/javascript', src='js/auth.js')
+    script(type='text/javascript', src='js/modal.js')

@@ -1,0 +1,21 @@
+html
+  head
+    title BudgetSheep | Login
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='css/index.css')
+    script(src='js/signin-auth.js')
+  body
+    h1 BudgetSheep
+    p easy budgetting.
+    #form-id.form
+      form.login-form
+        input#username(type='text', placeholder='username')
+        input#password(type='password', placeholder='password')
+        input#btn(type='button', value='login', onclick='signin()')
+        p.message
+          | Not registered?
+          a(href='/signup') Create an account
+    #ld.loader
+    p#toast
+    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+    script(src='js/auth.js')

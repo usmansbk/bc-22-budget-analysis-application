@@ -1,10 +1,3 @@
-function addUser(userId, name) {
-  var objRef = firebase.database().ref();
-  objRef.child('users').set({
-    username:userId
-  });
-}
-
 function makeToast(msg, color) {
     document.getElementById('toast').innerHTML = ''
     document.getElementById('toast').innerHTML = msg;
@@ -21,7 +14,7 @@ function createuser() {
   .then(function() {
     console.log('Creation successful')
     makeToast('Creating user account', 'green');
-    window.location='/'
+    window.location='/dashboard'
   }).catch(function(error) {
     console.log('Create user failed');
     makeToast('Failed to create user account', 'red')

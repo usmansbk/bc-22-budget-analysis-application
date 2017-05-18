@@ -4,7 +4,7 @@
   "description": "budget analyzer",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,14 @@
   "homepage": "https://github.com/usmansbk/bc-22-budget-analysis-application#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "client-sessions": "^0.8.0",
     "express": "^4.15.2",
-    "firebase": "^3.9.0"
+    "firebase": "^3.9.0",
+    "html": "^1.0.0",
+    "jade": "^1.11.0"
   },
   "engines": {
-    "node":"6.10.3",
-    "npm":"3.10.10"
-  },
-  "scripts": {
-    "start": "node app.js"
+    "node": "6.10.3",
+    "npm": "3.10.10"
   }
 }

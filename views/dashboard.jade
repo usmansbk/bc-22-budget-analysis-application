@@ -1,0 +1,20 @@
+html
+  head
+    title BudgetSheep | dashboard
+    meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1')
+    script(type='text/javascript', src='js/signout-auth.js')
+    script(type='text/javascript', src='js/navbtn.js')
+    link(rel='stylesheet', type='text/css', href='css/dashboard.css')
+  body
+    .navbar
+      span#title
+        | Welcome,
+        span#uid Usman Suleiman
+      input#lg-btn.logout(type='button', value='Log out', onclick='signout()', style='float: right;')
+    .main
+      ul(style='list-style-type:none')
+        li.item Item
+      .fab
+        button#newplan(onclick='newplan()') New Plan
+    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+    script(type='text/javascript', src='js/auth.js')

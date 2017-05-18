@@ -1,7 +1,7 @@
 function cancel() {
-  window.location = '/dashboard.html'
+  window.location = '/dashboard'
 }
 
 function newplan() {
-  window.location = '/newplan.html'
+  window.location = '/plan'
 }
