@@ -1,6 +1,4 @@
-var firebase = require('firebase');
 
-  // Initialize Firebase
 var config = {
   apiKey: "AIzaSyDXKRPg6YQvO-XG7PLdFyPo8DrQS9qveDs",
   authDomain: "budget-app-7c6f2.firebaseapp.com",
@@ -23,4 +21,3 @@ function writeUserTable(userId, table) {
 function save() {
   writeUserTable(userId, table);
 }
-

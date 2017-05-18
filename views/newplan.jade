@@ -5,7 +5,6 @@ html
     script(type='text/javascript', src='js/signout-auth.js')
     script(type='text/javascript', src='js/navbtn.js')
     script(type='text/javascript', src='controllers/manipulate_table.js')
-    script(type='text/javascript', src='controllers/save_table.js')
     link(rel='stylesheet', type='text/css', href='css/dashboard.css')
     link(rel='stylesheet', type='text/css', href='css/modal.css')
   body
@@ -24,12 +23,21 @@ html
               tr
                 th Category
                 th Total
+            p
+              | Total Income:
+              span#income_field
+            p
+              | Total Expenses:
+              span#expense_field
+            p
+              span#warning_field
             .close
       table#table
         tr
           th Category
           th Description
           th Amount
+          th Priority
       // Trigger/Open The Modal
       // The Modal
       #myModal.modal
@@ -52,6 +60,8 @@ html
                 option(value='Others') Others
               input#desc(type='text', placeholder='Description')
               input#amnt(type='number', placeholder='Amount')
+              input#priority(type='number',
+              placeholder='Priority')
               .fab
                 button(type='button', onclick='addrow()') Add
             .close
@@ -59,9 +69,11 @@ html
       .fab
         button#addbtn(onclick='add()') Add
       .fab
-        button#undobtn(onclick='deleterow()') Undo
+        button#undobtn(onclick='undo()') Undo
       .fab
         button#analysisbtn(onclick='analyzetable()') Analyze
+      .fab
+        button#sortbtn(onclick='sort()') Sort
       #savebtn.fab
         button(onclick='save()') Save
       #cancelbtn.fab

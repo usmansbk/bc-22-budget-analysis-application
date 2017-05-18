@@ -93,3 +93,10 @@ tr:nth-child(even) {
 #additem button:hover,#additem button:active,#additem button:focus {
   background: #184DE5;
 }
+
+p {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
