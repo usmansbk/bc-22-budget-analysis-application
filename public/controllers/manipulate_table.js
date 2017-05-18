@@ -1,5 +1,13 @@
-let mytable = [];
+var mytable = [];
 let summary = {};
+let total_income = 0;
+let exprenses = 0;
+
+function createJSONtable() {
+  let table = {};
+
+}
+
 function addrow() {
   let table = document.getElementById('table');
   let cat = document.getElementById('category').value;
@@ -34,7 +42,7 @@ function deleterow() {
   }
 }
 
-function save() {
+function _save() {
   let len = mytable.length;
   let result = '';
   for (let i = 0; i < len; i++) {
@@ -76,6 +84,7 @@ function createSummary() {
     }
   }
 }
+
 function analyzetable() {
   createSummary();
   displaySummary();

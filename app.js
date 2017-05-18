@@ -2,6 +2,7 @@ var express = require('express');
 var session = require('client-sessions');
 var app = express()
 var bodyParser = require('body-parser');
+var auth = require('./middlewares/signedauth.js')
 
 let port = process.env.PORT || 4000;
 //app.use(express.static('public'));
