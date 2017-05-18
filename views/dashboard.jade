@@ -5,6 +5,7 @@ html
     script(type='text/javascript', src='js/signout-auth.js')
     script(type='text/javascript', src='js/navbtn.js')
     link(rel='stylesheet', type='text/css', href='css/dashboard.css')
+    link(rel='stylesheet', type='text/css', href='css/modal.css')
   body
     .navbar
       span#title
@@ -14,6 +15,12 @@ html
     .main
       ul(style='list-style-type:none')
         li.item MY PLAN
+      table#table
+        tr
+          th Category
+          th Description
+          th Amount
+          th Priority
       .fab
         button#newplan(onclick='newplan()') New Plan
     script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
