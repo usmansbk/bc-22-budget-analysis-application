@@ -17,6 +17,6 @@ function createuser() {
     window.location='/dashboard'
   }).catch(function(error) {
     console.log('Create user failed');
-    makeToast('Failed to create user account', 'red')
+    makeToast('Failed to create user account', 'cyan')
   });
 }

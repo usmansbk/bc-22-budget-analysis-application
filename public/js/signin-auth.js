@@ -14,6 +14,6 @@
     document.getElementById('ld').style.visibility = 'hidden'
     document.getElementById('toast').innerHTML = 'Invalid username or password'
     document.getElementById('toast').style.fontSize = 'large'
-    document.getElementById('toast').style.color = 'red';
+    document.getElementById('toast').style.color = 'cyan';
   })
 }
