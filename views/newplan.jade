@@ -11,8 +11,19 @@ html
     .navbar
       span#title New Plan
       input#lg-btn.logout(type='button', value='Log out', onclick='signout()', style='float: right;')
-    // Trigger/Open The Modal
     .main
+
+      // Trigger/Open The Summary Modal
+      // The Modal
+      #mySummaryModal.modal
+        // Modal content
+        .modal-content
+          .modal-body
+            table#summaryTable
+              tr
+                th Category
+                th Total
+            .close
       table#table
         tr
           th Category
@@ -48,6 +59,8 @@ html
         button#addbtn(onclick='add()') Add
       .fab
         button#undobtn(onclick='deleterow()') Undo
+      .fab
+        button#analysisbtn(onclick='analyzetable()') Analyze
       #savebtn.fab
         button(onclick='save()') Save
       #cancelbtn.fab
