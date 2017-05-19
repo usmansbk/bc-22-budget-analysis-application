@@ -186,4 +186,5 @@ function fetch() {
 
 function save() {
   writeUserTable(jsonTable);
+  alert('Saved');
 }
