@@ -4,15 +4,13 @@ function jsonToArray() {
   let result = [];
   for (row in currentTable) {
       currentRow = currentTable[row];
-      for (cell in currentRow) {
-        let arrRow = [];
-        arrRow.push(currentRow['amount'])
-        arrRow.push(currentRow['category'])
-        arrRow.push(currentRow['description'])
-        arrRow.push(currentRow['priority'])
-        console.log('Row array', arrRow)
-        result.push(arrRow)
-      }
+      let arrRow = [];
+      arrRow.push(currentRow['amount'])
+      arrRow.push(currentRow['category'])
+      arrRow.push(currentRow['description'])
+      arrRow.push(currentRow['priority'])
+      console.log('Row array', arrRow)
+      result.push(arrRow)
   }
   return result;
 }
