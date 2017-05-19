@@ -81,7 +81,6 @@ function displaySummary() {
   } else {
     tincome.innerHTML = ' ' + 0;
   }
-  total = getTotalExpenses();
   texpense.innerHTML = ' ' + total;
 
   if (Number(summary['Income']) < total) {
@@ -101,9 +100,11 @@ function createSummary() {
       summary[cat] = Number(amnt);
     }
   }
+  total = getTotalExpenses();
 }
 
 function getTotalExpenses() {
+  total = 0;
   for (cat in summary) {
     if (cat === 'Income') continue;
     else {
