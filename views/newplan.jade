@@ -2,6 +2,8 @@ html
   head
     title BudgetSheep | New Plan
     meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+    script(type='text/javascript', src='js/auth.js')
     script(type='text/javascript', src='js/signout-auth.js')
     script(type='text/javascript', src='js/navbtn.js')
     script(type='text/javascript', src='controllers/manipulate_table.js')
@@ -78,6 +80,4 @@ html
         button(onclick='save()') Save
       #cancelbtn.fab
         button(onclick='cancel()') Cancel
-    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
-    script(type='text/javascript', src='js/auth.js')
     script(type='text/javascript', src='js/modal.js')

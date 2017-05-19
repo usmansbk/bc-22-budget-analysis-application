@@ -2,6 +2,8 @@ html
   head
     title BudgetSheep | Sign Up
     meta(charset='utf-8')
+    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+    script(src='js/auth.js')
     link(rel='stylesheet', type='text/css', href='css/signup.css')
   body
     h1 BudgetSheep
@@ -16,6 +18,4 @@ html
           | Already registered?
           a(href='/') Sign In
     p#toast
-    script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
-    script(src='js/auth.js')
     script(type='text/javascript', src='js/createuser-auth.js')

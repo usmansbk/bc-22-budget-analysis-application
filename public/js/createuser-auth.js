@@ -12,7 +12,7 @@ function createuser() {
   firebase.auth()
   .createUserWithEmailAndPassword(email, password)
   .then(function() {
-    console.log('Creation successful')
+    console.log('Creation successful');
     makeToast('Creating user account', 'green');
     window.location='/dashboard'
   }).catch(function(error) {

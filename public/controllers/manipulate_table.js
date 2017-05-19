@@ -2,6 +2,8 @@ var mytable = [];
 let summary = {};
 let total = 0;
 let sorted = false;
+let jsonTable = {};
+let nextIndex = 0;
 
 function createJSONtable() {
   let table = {};
@@ -17,6 +19,7 @@ function addrow() {
     priority = 0;
   }
   let myrow = [];
+  let jsonRow = {};
 
   if (desc != '' && amnt !== '' && amnt > 0) {
     let row = table.insertRow(-1);
@@ -33,11 +36,16 @@ function addrow() {
     myrow.push(desc);
     myrow.push(amnt);
     myrow.push(priority);
-
+    jsonRow['category'] = cat;
+    jsonRow['description'] = desc;
+    jsonRow['amount'] = amnt;
+    jsonRow['priority'] = priority
+    jsonTable[nextIndex + ''] = jsonRow;
+    nextIndex++;
     mytable.push(myrow);
   }
 }
-
+/*
 function save() {
   let len = mytable.length;
   let result = '';
@@ -45,7 +53,7 @@ function save() {
     result += mytable[i][0] + ' | ' + mytable[i][1] + ' | ' + mytable[i][2] + '\n';
   }
   console.log(result);
-}
+}*/
 
 function clearTable(tableid) {
   let table = document.getElementById(tableid);
@@ -161,4 +169,21 @@ function undo() {
       console.log(mytable);
     }
   }
+}
+
+var database = firebase.database().ref('table/');
+//var userId = firebase.auth().currentUser.uid;
+function writeUserTable(table) {
+  database.set(table);
+}
+
+function fetch() {
+  ref.on('value', function(snapshot) {
+    var currentTable = snapshot.val();
+  }, (err)=>{})
+  console.log(currentTable);
+}
+
+function save() {
+  writeUserTable(jsonTable);
 }
