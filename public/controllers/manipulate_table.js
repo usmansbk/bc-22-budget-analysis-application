@@ -122,7 +122,7 @@ function analyzetable() {
 function displayTable(tableid, theTable) {
   clearTable(tableid);
   let table = document.getElementById(tableid);
-  let len = mytable.length;
+  let len = theTable.length;
   for (let i = 0; i < len; i++) {
     let row = table.insertRow(-1);
     let category = row.insertCell(0);

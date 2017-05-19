@@ -1,21 +1,24 @@
-var currentTable;
-let tableRef = firebase.database().ref('table').once('value').then(function(snapshot) {
-  currentTable = snapshot.val();
-  console.log(snapshot.val());
-})
 
+var currentTable;
 function jsonToArray() {
   let result = [];
-  let arrRow = [];
   for (row in currentTable) {
-      console.log(row)
-      arrRow.push(row['amount'])
-      arrRow.push(row['category'])
-      arrRow.push(row['description'])
-      arrRow.push(row['priority'])
+      currentRow = currentTable[row];
+      for (cell in currentRow) {
+        let arrRow = [];
+        arrRow.push(currentRow['amount'])
+        arrRow.push(currentRow['category'])
+        arrRow.push(currentRow['description'])
+        arrRow.push(currentRow['priority'])
+        console.log('Row array', arrRow)
+        result.push(arrRow)
+      }
   }
   return result;
 }
-
-let arrTable = jsonToArray();
-displayTable('mytable', arrTable)
+let tableRef = firebase.database().ref('table').once('value').then(function(snapshot) {
+    currentTable = snapshot.val();
+    let arrTable = jsonToArray();
+    console.log(arrTable);
+    displayTable('mytable', arrTable);
+})
