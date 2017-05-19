@@ -165,7 +165,7 @@ function undo() {
     if (row_len > 1) {
       table.deleteRow(-1);
       mytable.pop();
-      console.log(mytable);
+     // console.log(mytable);
     }
   }
 }
