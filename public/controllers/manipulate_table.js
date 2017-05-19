@@ -81,11 +81,9 @@ function displaySummary() {
   } else {
     tincome.innerHTML = ' ' + 0;
   }
-  if (total > 0) {
-    texpense.innerHTML = ' ' + total;
-  } else {
-    texpense.innerHTML = ' 0';
-  }
+  total = getTotalExpenses();
+  texpense.innerHTML = ' ' + total;
+
   if (Number(summary['Income']) < total) {
     treport.innerHTML = 'Warning: Over Allocation<br>Deficit: ' + (total - Number(summary['Income']));
   }
@@ -121,7 +119,7 @@ function analyzetable() {
 }
 
 function displayTable(tableid, theTable) {
-  clearTable('table');
+  clearTable(tableid);
   let table = document.getElementById(tableid);
   let len = mytable.length;
   for (let i = 0; i < len; i++) {
