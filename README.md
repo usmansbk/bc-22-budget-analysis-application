@@ -42,7 +42,7 @@
   *  Running the command above will produce output that's similar to the sample below.
 
   ```
-    PS C:\projects\bc-19-budget-analysis-application> npm start
+    PS C:\projects\bc-22-budget-analysis-application> npm start
     > bc-22-budget-analysis-application@1.0.0 start C:\projects\bc-22-budget-analysis-application
     > nodemon app.js
 
@@ -50,6 +50,6 @@
     [nodemon] to restart at any time, enter `rs`
     [nodemon] watching: *.*
     [nodemon] starting `node server.js`
-    Server running on 4000
-  ```
-  * Open a browser and goto `localhost:4000`
+    Server running on 8081
+  ```
+  * Open a browser and goto `localhost:8081`
