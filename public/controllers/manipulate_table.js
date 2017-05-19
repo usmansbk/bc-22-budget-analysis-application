@@ -180,7 +180,7 @@ function fetch() {
   ref.on('value', function(snapshot) {
     var currentTable = snapshot.val();
   }, (err)=>{})
-  console.log(currentTable);
+// console.log(currentTable);
 }
 
 function save() {
